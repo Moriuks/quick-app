@@ -6,7 +6,7 @@
    class="logo">
    <h1 class="app-title">LCO todo list</h1>
 </div>
-<div class="container">
+<div class="container align-middle">
   add a todo...
   <br>
   <input
@@ -17,16 +17,16 @@
   [(ngModel)] = "todoValue"
   />
 
-  <button class="add-btn" (click)="addItem()">add todo</button>
+  <button class="btn btn-primary" (click)="addItem()">add todo</button>
 
   <div class="list">
-    <ul>
+    <ul >
       <li *ngFor="let item of list">
         <input type="checkbox" name="isDone"
         [(ngModel)]="item.isDone"
         />
         {{ item.value}}
-        <button class="btn" (click)="deleteItem(item.id)">Delete</button>
+        <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
       </li>
     </ul>
   </div>
